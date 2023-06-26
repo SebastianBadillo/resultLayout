@@ -1,0 +1,187 @@
+/* Global Config */
+:root{
+    --principalFont : 'Hanken Grotesk', sans-serif;
+    --lightRed : hsl(0, 100%, 67%);
+    --OrangeYellow: hsl(39, 100%, 56%);
+    --GreenTeal: hsl(166, 100%, 37%);
+    --cobaltBlue: hsl(234, 85%, 45%);
+    /*Gradients*/
+    --LightSlateBlue: hsl(252, 100%, 67%);/*background*/
+    --LightRoyalBlue: hsl(241, 81%, 54%);/*background*/
+    --VioletBlue: hsla(256, 72%, 46%, 1);/*Circle*/
+    --PersianBlue: hsla(241, 72%, 46%, 0);/*Circle*/
+    --White: hsl(0, 0%, 100%);
+    --PaleBlue: hsl(221, 100%, 96%);
+    --LightLavender: hsl(241, 100%, 40%);
+    --DarkGrayBlue: hsl(224, 30%, 27%);
+
+}
+html{
+    font-size: 62.5%;
+    /*The upper lines are vital, it allows that 1 rem = 10px*/
+    box-sizing: border-box;
+    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/* General Adjustments*/
+h2, p{
+    font-family: var(--principalFont);
+}
+
+.summary h2, .result h2{
+    text-align: center;
+    font-size: 2.3rem;
+}
+.summary__section h3{
+    font-family: var(--principalFont);
+    font-size: 1.3rem;
+}
+.summary__section p{
+    text-align: center;
+    color: black;
+    font-family: var(--principalFont);
+    font-weight: bold;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+}
+span{
+    font-weight: lighter;
+}
+
+img{
+    margin: 1rem;
+}
+.nogrid{
+    display: flex;
+}
+button{
+    width: 100%;
+    background-color: hsl(241, 81%, 15%);
+    text-decoration: none;
+    font-family: var(--principalFont);
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+}
+
+/*Box configurations*/
+.container{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    width: 50%;
+    margin: 20rem auto;
+    justify-content: space-around;
+    border-radius: 1rem; 
+    box-shadow: 0 30px 40px rgba(0,0,0,.1);
+}
+
+@media (min-width :769px ){
+    .container{
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+        width: 50%;
+    }
+}
+@media (max-width : 490px){
+    .container{
+        width: 90%;
+        margin-top: 10rem;
+    }
+}
+
+.result{
+    background-image: linear-gradient(to bottom, var(--LightSlateBlue), var(--LightRoyalBlue));
+    border-radius: 1rem;
+}
+
+.summary__section{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    margin-bottom: 2rem;
+}
+
+.red{
+    background-color: hsl(0, 100%, 95%) ;
+    color: var(--lightRed);
+}
+.yellow{
+    background-color: hsl(39, 100%, 95%);
+    color: var(--OrangeYellow);
+}
+
+.green{
+    background-color: hsl(166, 100%, 95%);
+    color: var(--GreenTeal);
+}
+
+.purple{
+    background-color: hsl(241, 100%, 95%);
+    color: var(--LightLavender);
+
+}
+.nogrid{
+    display: flex;
+}
+
+.result h2{
+    color: hsla(0, 13%, 100%, 0.9);
+}
+
+.result{
+    display: grid;
+    grid-template-rows: 1fr 2fr 0.5fr ;
+}
+.result h3, p{
+    text-align: center;
+}
+
+.circle{
+    
+    margin: 0 auto;
+
+    width: 50%; /* Adjust the width and height as per your requirements */
+    height: 0;
+    padding-bottom: 50%; /* Creates a square based on the width */
+    background-image: linear-gradient(to bottom, var(--LightRoyalBlue), var(--LightSlateBlue)); /* Replace with your desired background color */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+.number{
+    color: white;
+    font-family: var(--principalFont);
+    margin-top: 30%;
+    font-size: 3.5rem;
+}
+.circle p{
+    margin-top: 0;
+    color: azure;
+}
+
+.result h3{
+    font-family: var(--principalFont);
+    color: white;
+    font-size: 2rem;
+}
+.text{
+    width: 70%;
+    margin: 0 auto;
+}
+.result p{
+    font-family: var(--principalFont);
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
